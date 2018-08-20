@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context=".activity.home.MainActivity">
+    <RadioGroup
+        android:id="@+id/tab_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/main_shade_jj"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/tab_home_bg"
+            style="@style/main_bottom_tab_style"
+            android:drawableTop="@drawable/tab_btn_munshroom_home"
+            android:checked="true" />
+        <RadioButton
+            android:id="@+id/tab_rank"
+            style="@style/main_bottom_tab_style"
+            android:drawableTop="@drawable/tab_btn_munshroom_rank" />
+        <RadioButton
+            android:id="@+id/tab_mine"
+            style="@style/main_bottom_tab_style"
+            android:drawableTop="@drawable/tab_btn_munshroom_mine" />
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/show_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/tab_radiogroup"
+        android:background="#DDDCDC"/>
+
+</RelativeLayout>

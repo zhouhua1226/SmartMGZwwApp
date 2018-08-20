@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.game.smartmgzwwapp.view.ElasticScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:scrollbars="none"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:background="@color/white"
+           android:layout_height="230dp">
+          <ImageView
+              android:layout_width="match_parent"
+              android:background="@drawable/icon_center_bg"
+              android:layout_alignParentTop="true"
+              android:layout_height="160dp" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="30dp"
+               android:layout_centerHorizontal="true"
+               android:text="个人中心"
+               android:textColor="#383416"
+               android:textSize="18sp" />
+           <LinearLayout
+               android:layout_width="200dp"
+               android:orientation="vertical"
+               android:layout_alignParentLeft="true"
+               android:gravity="center"
+               android:layout_marginTop="80dp"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:id="@+id/user_center_image"
+                   android:layout_width="70dp"
+                   android:layout_height="70dp" />
+               <TextView
+                   android:id="@+id/user_center_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:ellipsize="end"
+                   android:gravity="left"
+                   android:maxLines="1"
+                   android:textColor="#383416"
+                   android:textSize="16sp"
+                   android:textStyle="bold"
+                   tools:text="布偶先生" />
+               <TextView
+                   android:id="@+id/tv_center_golds"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="8dp"
+                   android:gravity="center"
+                   android:text="游戏币：0"
+                   android:textColor="#838368"
+                   android:textSize="13sp" />
+           </LinearLayout>
+           <Button
+               android:id="@+id/tv_center_recharge"
+               android:layout_width="80dp"
+               android:layout_height="35dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentRight="true"
+               android:layout_margin="@dimen/activity_horizontal_margin"
+               android:background="@drawable/bg_get_code"
+               android:gravity="center"
+               android:text="充值中心"
+               android:textColor="#403f1e"
+               android:textSize="14sp" />
+       </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_center_order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_order"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_order"
+                android:gravity="center"
+                android:text="订单查询"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_center_gold_record"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_gold_record"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_gold_record" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_gold_record"
+                android:gravity="center"
+                android:text="金币记录"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_center_bet_record"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_bet_record"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_bet_record" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_bet_record"
+                android:gravity="center"
+                android:text="竞猜记录"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_center_wawa_mail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_wawa_mail"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_wawa_mail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_wawa_mail"
+                android:gravity="center"
+                android:text="娃娃邮寄"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_center_wawa_exchange"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_wawa_exchange"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_wawa_exchange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_wawa_exchange"
+                android:gravity="center"
+                android:text="娃娃兑换"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_center_invite_code"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_invite_code"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_invite_code" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_invite_code"
+                android:gravity="center"
+                android:text="邀 请 码"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_center_customer_service"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_customer_service"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_customer_service" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_customer_service"
+                android:gravity="center"
+                android:text="客      服"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_center_set"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_center_set"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_center_set" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/iv_center_set"
+                android:gravity="center"
+                android:text="设      置"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.game.smartmgzwwapp.view.ElasticScrollView>

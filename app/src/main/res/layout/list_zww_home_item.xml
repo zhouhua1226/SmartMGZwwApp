@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zwwadapter_item_parent_layout"
+    android:layout_width="@dimen/PX_335"
+    android:layout_height="wrap_content">
+
+    <com.game.smartmgzwwapp.view.RoundRoomImageView
+        android:id="@+id/rriv_moppet_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/PX_335" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="155dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rriv_moppet_image"
+        android:background="@drawable/zwwadapter_item_bottom_bg">
+
+        <TextView
+            android:id="@+id/tv_moppet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#4c4722"
+            android:textSize="13sp"
+            android:layout_marginLeft="6dp"
+            tools:text="奇幻水晶"
+            android:maxLines="1"
+            />
+        <TextView
+            android:id="@+id/tv_moppet_gold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/tv_moppet_name"
+            android:textColor="#b4b4b4"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="11sp"
+            tools:text="10金币/次"
+            android:maxLines="1"
+            />
+        <TextView
+            android:id="@+id/tv_moppet_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="游戏中"
+            android:textColor="#fcd803"
+            android:textSize="11sp" />
+        <ImageView
+            android:id="@+id/iv_moppet_state"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/tv_moppet_state" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

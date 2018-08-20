@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="backcolor">#efefef</color>
+    <color name="pink">#fe719b</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#c20202</color>
+    <color name="gray">#808080</color>
+    <color name="black">#000000</color>
+    <color name="main_red">#e3393c</color>
+    <color name="main_gray">#57515d</color>
+    <color name="select_pop_gv_bg">#e4e4e4</color>
+    <color name="update_sure_color">#007aff</color>
+    <color name="green">#6dc9b8</color>
+    <color name="redx">#ea6387</color>
+    <color name="update_dialog_bg">#ffffff</color>
+    <color name="zww_broadcast_text">#ff9700</color>
+    <color name="login_lolor_bg">#f16081</color>
+    <color name="run_text_bg">#efefef</color>
+    <color name="geren_bg">#ececec</color>
+    <!--
+      <color name="apptheme_bg">#bab9fe</color> 旧版主题色：bab9fe
+    -->
+    <color name="coin_bg">#ffd700</color>
+    <color name="apptheme_bg">#fed201</color>  <!-- 119 49 19-->
+    <color name="betrecordcolor">#e73640</color>
+    <color name="brilliant_red">#FF0000</color>
+    <color name="betrecordcolor1">#008c1a</color>
+    <color name="midle_white">#f9f9f9</color>
+    <color name="my_ranknumtv_bg">#26BAAF</color>
+    <color name="midle_black">#505050</color>
+    <color name="ctrl_marquee_bg">#50000000</color>
+    <color name="zww_marquee_text_bg">#ffe980</color>   <!-- #ffe980 -->
+    <color name="ctrl_textcolor">#fcf005</color>
+    <color name="zww_gary_bg">#eceaea</color>
+    <color name="blue">#8DBCF6</color><!-- 141 188 246 -->
+    <color name="gray_drak">#777777</color><!-- 119 119 119 -->
+    <color name="hihtcolor">#C6C6C6</color> <!-- 198 198 198 -->
+    <color name="backgroundcolor">#E2E2E2</color><!-- 226 226 226-->
+    <color name="gray_background">#e8e8e8</color>
+    <color name="gray_line">#ebebeb</color>
+    <color name="black_light">#555555</color><!-- 85 85 85-->
+    <color name="black_drak">#353535</color> <!-- 53 53 53-->
+    <color name="blue_light">#8DBCF6</color><!-- 141 188 246-->
+    <color name="yellow">#FECC01</color>
+    <color name="yellow_drak">#Fed900</color>
+    <color name="brown">#773113</color>
+    <color name="gray_dark">#929292</color><!-- 146 146 146-->
+    <color name="blue_drak">#304F69</color><!-- 48 79 105-->
+    <color name="red_drak">#DD5341</color><!-- 221 83 65-->
+    <color name="gray119">#777777</color><!-- 119 119 119-->
+    <color name="common_gary_bg">#ededed</color>
+    <!-- 红色文本颜色 -->
+    <color name="common_red_text_color">#ff6464</color>
+    <color name="recharge_red_color">#fc2f2f</color>
+    <color name="recharge_blue_color">#72c6ff</color>
+</resources>

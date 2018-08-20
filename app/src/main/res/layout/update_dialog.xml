@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/icon_update_bg">
+        <TextView
+            android:id="@+id/update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您有新的版本需要更新！"
+            android:layout_marginTop="120dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#403c1e"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/update_sure_btn"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="马上更新"
+            android:textColor="@color/white"
+            android:background="@drawable/update_btn_bg"
+            android:textSize="14sp"
+            android:layout_below="@+id/update_title"
+            android:layout_marginTop="35dp"
+            android:layout_centerHorizontal="true"
+           />
+    </RelativeLayout>
+</LinearLayout>

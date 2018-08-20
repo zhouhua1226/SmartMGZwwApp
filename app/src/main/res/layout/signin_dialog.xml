@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="50dp"
+    android:background="@drawable/tm_sign_layout_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="签到领金币啦"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/signin_cancle_ibtn"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tm_sign_cancle"
+            android:padding="5dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/signin_day1_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/signin_day1_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin5" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day1_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day1" />
+
+                    <ImageView
+                        android:id="@+id/signin_day1_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day1_ibtn"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/yellow" />
+
+
+                -
+
+                <RelativeLayout
+                    android:id="@+id/signin_day2_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/signin_day2_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin5" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day2_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day2" />
+
+                    <ImageView
+                        android:id="@+id/signin_day2_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day2_ibtn"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/yellow" />
+                <RelativeLayout
+                    android:id="@+id/signin_day3_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/signin_day3_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin15" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day3_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day3" />
+
+                    <ImageView
+                        android:id="@+id/signin_day3_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day3_ibtn"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/yellow" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/signin_day6_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/signin_day6_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin10" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day6_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day6" />
+
+                    <ImageView
+                        android:id="@+id/signin_day6_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day6_ibtn"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/yellow" />
+
+                <RelativeLayout
+                    android:id="@+id/signin_day5_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/signin_day5_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin10" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day5_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day5" />
+
+                    <ImageView
+                        android:id="@+id/signin_day5_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day5_ibtn"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/yellow" />
+                <RelativeLayout
+                    android:id="@+id/signin_day4_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/signin_day4_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin10" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day4_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day4" />
+
+                    <ImageView
+                        android:id="@+id/signin_day4_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day4_ibtn"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/sigin_day7_line1"
+                    android:layout_width="2dp"
+                    android:layout_height="58dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/yellow" />
+
+                <View
+                    android:layout_width="45dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/sigin_day7_line1"
+                    android:layout_marginLeft="25dp"
+                    android:background="@color/yellow" />
+
+                <RelativeLayout
+                    android:id="@+id/signin_day7_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp">
+
+                    <ImageButton
+                        android:id="@+id/signin_day7_ibtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tm_sign_coin30" />
+
+                    <ImageView
+                        android:id="@+id/signin_day7_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day7_ibtn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/tm_sign_day7" />
+
+                    <ImageView
+                        android:id="@+id/signin_day7_dot_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/signin_day7_ibtn"
+                        android:layout_marginLeft="31dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/tm_sign_green_dot" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/signin_sure_ibtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/tm_sign_sure_bg" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

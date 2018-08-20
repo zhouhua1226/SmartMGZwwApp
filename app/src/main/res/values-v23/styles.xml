@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/apptheme_bg</item>
+    </style>
+    <style name="BlackBarAppTheme" parent="MyAppTheme">
+        <item name="colorPrimary">@color/apptheme_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="mainTheme" parent="MyAppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/playrecord_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/fail_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无记录"
+        android:textColor="@color/gray"
+        android:background="#fbfbfb"
+        android:gravity="center_horizontal"
+        android:paddingTop="50dp"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

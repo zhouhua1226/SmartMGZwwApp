@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceaea"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/apptheme_bg"
+        android:layout_height="25dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/apptheme_bg">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_app_numsgroom" />
+    </RelativeLayout>
+
+    <com.game.smartmgzwwapp.view.PullToRefreshView
+        android:id="@+id/mPullToRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/apptheme_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:paddingTop="10dp"
+                        android:layout_height="200dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="60dp"></View>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardview_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="30dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:contentPadding="3dp"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="5dp">
+                        <com.youth.banner.Banner
+                            android:id="@+id/home_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        </android.support.v7.widget.CardView>
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/type_tly"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_write_radiu_border"
+                        android:layout_margin="10dp"
+                        app:tabIndicatorColor="#fcd803"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabSelectedTextColor="#4c4722"
+                        app:tabTextAppearance="@style/MyTableyoutTextAppearance"
+                        app:tabTextColor="#8c8c8c" />
+                </LinearLayout>
+
+                <com.game.smartmgzwwapp.view.EmptyLayout
+                    android:id="@+id/home_emptylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#eceaea">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/home_recyclerview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="#eceaea"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </com.game.smartmgzwwapp.view.EmptyLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.game.smartmgzwwapp.view.PullToRefreshView>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="70dp"
+    >
+
+    <TextView
+        android:id="@+id/periodsNum_tv"
+        android:gravity="center"
+        android:layout_weight="7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:text="1227001"/>
+    <TextView
+        android:id="@+id/results_tv"
+        android:gravity="center"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:textColor="@color/black"
+        android:layout_height="match_parent"
+        tools:text="抓中"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:layout_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/bettingResults_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e73640"
+            tools:text="不中"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/bettingResults_tv"
+            android:id="@+id/bettingResults_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e73640"
+            tools:text="/对"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/amount_tv"
+        android:gravity="center"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:textColor="#ff7f25"
+        android:layout_height="match_parent"
+        android:text="87"/>
+
+    <TextView
+        android:id="@+id/guessnum_tv"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:textColor="@color/black"
+        android:layout_height="match_parent"
+        android:text="87"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

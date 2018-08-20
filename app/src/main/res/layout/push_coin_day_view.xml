@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:orientation="horizontal"
+     android:layout_height="150dp">
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:orientation="vertical"
+         android:layout_height="match_parent">
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="200 -"
+         android:textColor="@color/white"
+         android:textSize="11sp"
+         android:layout_weight="1"
+         android:layout_height="wrap_content" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="150 -"
+         android:textColor="@color/white"
+         android:textSize="11sp"
+         android:layout_weight="1"
+         android:layout_height="wrap_content" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="100 -"
+         android:layout_weight="1"
+         android:textColor="@color/white"
+         android:textSize="11sp"
+         android:layout_height="wrap_content" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="  50 -"
+         android:layout_weight="1"
+         android:textColor="@color/white"
+         android:textSize="11sp"
+         android:layout_height="wrap_content" />
+     </LinearLayout>
+     <ProgressBar
+         android:id="@+id/progress"
+         android:layout_width="10dp"
+         android:layout_height="150dp"
+         android:layout_alignParentRight="true"
+         android:indeterminateOnly="false"
+         android:max="100"
+         android:progress="0"
+         android:progressDrawable="@drawable/coin_bar_color"></ProgressBar>
+ </LinearLayout>
+</LinearLayout>

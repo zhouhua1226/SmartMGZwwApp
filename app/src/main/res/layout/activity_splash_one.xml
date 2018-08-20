@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_splash_one_bg">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/rl_weiixn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bg_splash_one_weiixn"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_weixin_login"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="微信登录"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_28" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_phone_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/bg_splash_one_phone"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_phone_login_write"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="登录/注册"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_28" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_protocol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_protocol"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@null"
+            android:background="@drawable/cb_protocol_selecter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/protocol"
+            android:textColor="#414027"
+            android:layout_marginLeft="5dp"
+            android:textSize="@dimen/text_font_size_28" />
+    </LinearLayout>
+    </LinearLayout>
+    <com.game.smartmgzwwapp.view.GifView
+        android:id="@+id/weiixn_loading_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:visibility="gone" />
+</RelativeLayout>

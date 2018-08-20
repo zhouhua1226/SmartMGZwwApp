@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="65dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_iv"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            tools:text="可爱熊兑换游戏币"/>
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_below="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_iv"
+            android:textSize="12sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#848484"
+            android:text="2017/10/17 14:12"/>
+
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#fb7e50"
+            android:layout_marginRight="15dp"
+            tools:text="+50"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

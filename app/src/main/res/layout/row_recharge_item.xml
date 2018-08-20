@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+   android:id="@+id/ll_chargere_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:id="@+id/rl_chargere_bg"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_dialog_shape"
+    android:layout_height="wrap_content">
+  <RelativeLayout
+      android:id="@+id/rl_car_money"
+      android:layout_width="match_parent"
+      android:layout_height="70dp">
+  <ImageView
+      android:id="@+id/iv_recharge_first_notice"
+      android:layout_width="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:src="@drawable/recharge_first_notice"
+      android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_recharge_money"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_recharge_money"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14sp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@+id/tv_recharge_money"
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:text="充"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_send_money"
+        android:layout_width="wrap_content"
+        android:textColor="@color/recharge_red_color"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14sp"
+        android:layout_height="wrap_content" />
+  </RelativeLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_below="@+id/rl_car_money"
+      android:gravity="center"
+      android:background="@drawable/racharge_adapter_item_bottom_bg"
+      android:layout_height="30dp">
+    <TextView
+        android:id="@+id/tv_recharge_summoney"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

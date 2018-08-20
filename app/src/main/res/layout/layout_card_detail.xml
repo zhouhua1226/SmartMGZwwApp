@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/image_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_black_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的卡"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/card_detail_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/header"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radio_week_card"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/radio_time_type"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="周卡"
+            android:textColor="@color/custom_tab_title_selector"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/radio_mouth_card"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/radio_time_type"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:text="月卡"
+            android:textColor="@color/custom_tab_title_selector"
+            android:textSize="16sp" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/card_detail_radiogroup"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content">
+       <ImageView
+           android:id="@+id/iv_card_bg"
+           android:layout_width="match_parent"
+           android:layout_marginTop="10dp"
+           android:background="@drawable/icon_week_detail"
+           android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_detail_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_detail_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_detail_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/tv_card_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="2000"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="26dp"
+            android:layout_toRightOf="@+id/tv_card_money"
+            android:gravity="bottom"
+            android:text=" 元"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_card_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="14dp"
+            android:gravity="center"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/iv_card_buy"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="购买"
+            android:background="@drawable/bg_buy_text_red"
+           />
+    </RelativeLayout>
+
+</RelativeLayout>

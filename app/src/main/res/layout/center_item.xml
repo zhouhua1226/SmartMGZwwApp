@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/center_item"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/center_item_left_layout"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_weight="5"
+        android:background="@drawable/center_item">
+
+        <ImageView
+            android:id="@+id/moppet_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/moppet_image"
+            android:background="#e3e3e3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/moppet_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/moppet_image"
+            android:text="皮卡丘"
+            android:textColor="#5c5c5c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mopper_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/moppet_name_tv"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/moppet_image"
+            android:text="2017/09/25 13:44"
+            android:textColor="@color/gray"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/center_item_glod_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/moppet_name_tv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="可兑换金币:80"
+            android:textColor="@color/gray"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d6d6d6"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/center_item_right_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/mopper_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mycatchrecord_unselect" />
+
+        <TextView
+            android:id="@+id/mopper_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
