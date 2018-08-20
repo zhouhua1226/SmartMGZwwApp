@@ -358,4 +358,10 @@ public class UrlUtils {
     //微信订单信息
     public static final String ORDERWXTRADE = URL+"/pooh-web/app/pay/getTradeOrderxdpay";
 
+    //新微信订单信息
+    public static final String ORDERWXTRADENEW = URL+"/pooh-web/app/pay/getTradeOrderxdpayVer";
+
+    //新支付宝信订单信息
+    public static final String ORDERAPALIYTRADENEW = URL+"/pooh-web/app/pay/getTradeOrderAlipayVer";
+
 }

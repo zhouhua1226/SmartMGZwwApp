@@ -120,12 +120,12 @@ public class RechargeActivity extends BaseActivity implements ReceivePayResult {
             public void onItemClick(int position) {
                 PayCardBean mPayCardBean=mPayCardBeans.get(position);
                 String  isFirst=  SPUtils.getString(getApplicationContext(), UserUtils.SP_FIRET_CHARGE,"0");
-                          if(isFirst.equals("0")){
-                              payOutType="fc";
-                              getPayTypeDialog(mPayCardBean.getAMOUNT(),mPayCardBean.getFIRSTAWARD_GOLD());
-                           }else{
-                              payOutType="nm";
-                              getPayTypeDialog(mPayCardBean.getAMOUNT(),mPayCardBean.getGOLD());
+                if(isFirst.equals("0")){
+                    payOutType="fc";
+                    getPayTypeDialog(mPayCardBean.getID());
+                }else{
+                    payOutType="nm";
+                    getPayTypeDialog(mPayCardBean.getID());
                 }
             }
         }));
@@ -144,13 +144,13 @@ public class RechargeActivity extends BaseActivity implements ReceivePayResult {
             case R.id.ll_mouth_car:
                 if(mMouth!=null){
                     payOutType="mc";
-                    getPayTypeDialog(mMouth.getAMOUNT(),mMouth.getRECHARE());
+                    getPayTypeDialog(mMouth.getID());
                 }
                 break;
             case R.id.ll_week_car:
                 if(mWeek!=null){
                     payOutType="wc";
-                    getPayTypeDialog(mWeek.getAMOUNT(), mWeek.getRECHARE());
+                    getPayTypeDialog(mWeek.getID());
                 }
                 break;
         }
@@ -170,10 +170,10 @@ public class RechargeActivity extends BaseActivity implements ReceivePayResult {
                 SPUtils.putString(getApplicationContext(), UserUtils.SP_FIRET_CHARGE, result.getData().getAppUser().getFIRST_CHARGE());
                 isFirst=result.getData().getAppUser().getFIRST_CHARGE();
                 userBlance.setText(UserUtils.UserBalance);
-               if(mPayCardBeans.size()>0) {
-                   mRechargeAdapter.setIsFirstReacher(isFirst);
-                   mRechargeAdapter.notifyDataSetChanged();
-               }
+                if(mPayCardBeans.size()>0) {
+                    mRechargeAdapter.setIsFirstReacher(isFirst);
+                    mRechargeAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override
@@ -191,15 +191,15 @@ public class RechargeActivity extends BaseActivity implements ReceivePayResult {
                 if (loginInfoResult.getCode()==0) {
                     List<PayCardBean>   mylist = loginInfoResult.getData().getPaycard();
                     for (PayCardBean mPayCardBean:mylist) {
-                         if(mPayCardBean.getID()==8){//周卡
-                             mWeek=mPayCardBean;
-                         }else if(mPayCardBean.getID()==9){//月卡
+                        if(mPayCardBean.getID()==8){//周卡
+                            mWeek=mPayCardBean;
+                        }else if(mPayCardBean.getID()==9){//月卡
                             mMouth=mPayCardBean;
-                         }else{
-                             mPayCardBeans.add(mPayCardBean);
-                         }
+                        }else{
+                            mPayCardBeans.add(mPayCardBean);
+                        }
                     }
-                 initData();
+                    initData();
                 }
             }
 
@@ -227,45 +227,41 @@ public class RechargeActivity extends BaseActivity implements ReceivePayResult {
      * 调取支付支付界面
      */
     private void startPay(String orderInfo) {
-         AlipayUtils.startApliyPay(this, orderInfo, new AlipayUtils.OnApliyPayResultListenter() {
-             @Override
+        AlipayUtils.startApliyPay(this, orderInfo, new AlipayUtils.OnApliyPayResultListenter() {
+            @Override
             public void OnApliyPayResult(boolean isSuccess) {
-                 if (isSuccess) {
-                     getAppUserInf();
-                 }
+                if (isSuccess) {
+                    getAppUserInf();
+                }
             }
         });
     }
 
     /**
      *选择支付方式
-     * @param amount
      *
      */
-    private void getPayTypeDialog(final String amount, final String reGold) {
+    private void getPayTypeDialog(final int pid) {
         PayTypeDialog mPayTypeDialog = new PayTypeDialog(this, R.style.activitystyle);
         mPayTypeDialog.show();
         mPayTypeDialog.setDialogResultListener(new PayTypeDialog.DialogResultListener() {
             @Override
             public void getResult( boolean payChannelType) {
-                 if(payChannelType ){
-                     getNowPayOrder(amount,reGold, "13");
-                 }else{
-                     getOrderInfo(amount,reGold );
-                 }
+                if(payChannelType ){
+                    getNowPayOrder(pid, "13");
+                }else{
+                    getOrderInfo( pid );
+                }
             }
         });
     }
 
     /**
      *获取微信订单信息
-     *
-     * @param amount
-     * @param reGold
      */
-    private void getNowPayOrder( String amount, String reGold,String payChannelType) {
-        HttpManager.getInstance().getNowPayOrder(UserUtils.USER_ID,  amount,payChannelType,
-                 reGold,payOutType, new RequestSubscriber<NowPayBean<OrderBean>>() {
+    private void getNowPayOrder( int pid,  String payChannelType) {
+        HttpManager.getInstance().getNowWXPayOrder(UserUtils.USER_ID, pid+"",payChannelType,
+                payOutType, new RequestSubscriber<NowPayBean<OrderBean>>() {
                     @Override
                     public void _onSuccess(NowPayBean<OrderBean> result) {
                         if (result.getCode() == 0) {
@@ -282,42 +278,40 @@ public class RechargeActivity extends BaseActivity implements ReceivePayResult {
 
     /**
      *获取支付宝订单信息
-     * @param amount
-     * @param reGold
      */
-    private void getOrderInfo(String amount, String reGold) {
-        HttpManager.getInstance().getTradeOrderAlipay(UserUtils.USER_ID, amount,
-                reGold,payOutType, new RequestSubscriber<Result<AlipayBean>>() {
-            @Override
-            public void _onSuccess(Result<AlipayBean> result) {
-                if (result.getCode() == 0) {
-                    startPay(result.getData().getAlipay()); //调用支付宝支付接口
-                }
-            }
+    private void getOrderInfo(int pid) {
+        HttpManager.getInstance().getOrderAlipay(UserUtils.USER_ID, pid+"",
+                payOutType, new RequestSubscriber<Result<AlipayBean>>() {
+                    @Override
+                    public void _onSuccess(Result<AlipayBean> result) {
+                        if (result.getCode() == 0) {
+                            startPay(result.getData().getAlipay()); //调用支付宝支付接口
+                        }
+                    }
 
-            @Override
-            public void _onError(Throwable e) {
-                LogUtils.logi(e.getMessage());
-            }
-        });
+                    @Override
+                    public void _onError(Throwable e) {
+                        LogUtils.logi(e.getMessage());
+                    }
+                });
     }
 
     @Override
     public void onIpaynowTransResult(ResponseParams responseParams) {
-            String respCode = responseParams.respCode;
-            String errorCode = responseParams.errorCode;
-            String errorMsg = responseParams.respMsg;
-            StringBuilder temp = new StringBuilder();
-            if (respCode.equals("00")) {
-                getAppUserInf();
-                MyToast.getToast(getApplicationContext(),"支付成功!").show();
-            } else if (respCode.equals("02")) {
-                MyToast.getToast(getApplicationContext(),"支付取消!").show();
-            } else if (respCode.equals("01")) {
-                MyToast.getToast(getApplicationContext(),"支付失败!").show();
-                Log.e( TAG,"respCode:" + respCode+"respMsg:"+errorMsg);
-            }  else {
-                Log.e( TAG,"respCode:" + respCode+"respMsg:"+errorMsg);
-            }
+        String respCode = responseParams.respCode;
+        String errorCode = responseParams.errorCode;
+        String errorMsg = responseParams.respMsg;
+        StringBuilder temp = new StringBuilder();
+        if (respCode.equals("00")) {
+            getAppUserInf();
+            MyToast.getToast(getApplicationContext(),"支付成功!").show();
+        } else if (respCode.equals("02")) {
+            MyToast.getToast(getApplicationContext(),"支付取消!").show();
+        } else if (respCode.equals("01")) {
+            MyToast.getToast(getApplicationContext(),"支付失败!").show();
+            Log.e( TAG,"respCode:" + respCode+"respMsg:"+errorMsg);
+        }  else {
+            Log.e( TAG,"respCode:" + respCode+"respMsg:"+errorMsg);
         }
+    }
 }

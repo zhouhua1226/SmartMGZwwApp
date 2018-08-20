@@ -702,4 +702,25 @@ public class HttpManager {
                 .subscribe(subscriber);
 
     }
+    //新支付宝支付
+    public void getOrderAlipay( String userId, String pid , String payOutType, RequestSubscriber<Result<AlipayBean>> subscriber) {
+        Observable<Result<AlipayBean>> o =smartService.getApaliyPayOrder(userId,pid, Utils.appVersion,payOutType,"R",
+                UrlUtils.LOGIN_CTYPE,UrlUtils.LOGIN_CHANNEL);
+        o.subscribeOn(Schedulers.newThread())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
+
+    }
+
+    // 现在微信支付
+    public void getNowWXPayOrder( String userId, String pid,String payChannelType,  String payOutType, RequestSubscriber<NowPayBean<OrderBean>> subscriber) {
+        Observable<NowPayBean<OrderBean>> o =smartService.getNowWXPayOrder(userId,pid,payChannelType,Utils.appVersion,payOutType,"R",
+                UrlUtils.LOGIN_CTYPE,UrlUtils.LOGIN_CHANNEL);
+        o.subscribeOn(Schedulers.newThread())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
+
+    }
 }

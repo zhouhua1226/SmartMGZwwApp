@@ -42,7 +42,6 @@ import butterknife.OnClick;
  */
 
 public class CardDetailActivity extends BaseActivity implements ReceivePayResult {
-
     private static final String TAG ="CardDetailActivity==========" ;
     @BindView(R.id.card_detail_radiogroup )
     RadioGroup radiogroup;
@@ -102,7 +101,7 @@ public class CardDetailActivity extends BaseActivity implements ReceivePayResult
                         break;
                 }
             }
-          });
+        });
 
         if(type>1){
             radio_mouth.setChecked(true);
@@ -155,10 +154,10 @@ public class CardDetailActivity extends BaseActivity implements ReceivePayResult
             case R.id.iv_card_buy:
                 if(mWeek!=null&&mMouth!=null) {
                     if (type > 1) {
-                        getPayTypeDialog(mMouth.getAMOUNT(), mMouth.getRECHARE(), payOutType);
-                     } else {
-                        getPayTypeDialog(mWeek.getAMOUNT(), mWeek.getRECHARE(), payOutType);
-                     }
+                        getPayTypeDialog(mMouth.getID());
+                    } else {
+                        getPayTypeDialog(mWeek.getID() );
+                    }
                 }
                 break;
         }
@@ -167,16 +166,16 @@ public class CardDetailActivity extends BaseActivity implements ReceivePayResult
     /**
      *选择支付方式
      */
-    private void getPayTypeDialog(final String amount, final String reGold, final String payOutType) {
+    private void getPayTypeDialog(final int pid ) {
         PayTypeDialog mPayTypeDialog = new PayTypeDialog(this, R.style.activitystyle);
         mPayTypeDialog.show();
         mPayTypeDialog.setDialogResultListener(new PayTypeDialog.DialogResultListener() {
             @Override
             public void getResult(boolean payChannelType) {
                 if(payChannelType){ //支付宝支付
-                    getNowPayOrder(amount,reGold,payOutType,"13");
+                    getNowPayOrder(pid,"13");
                 }else{
-                    getOrderInfo(amount,reGold,payOutType);
+                    getOrderInfo(pid);
                 }
             }
         });
@@ -184,13 +183,10 @@ public class CardDetailActivity extends BaseActivity implements ReceivePayResult
 
     /**
      *获取微信订单信息
-     * @param
-     * @param amount
-     * @param reGold
      */
-    private void getNowPayOrder(  String amount, String reGold,String payOutType, String payChannelType) {
-        HttpManager.getInstance().getNowPayOrder(UserUtils.USER_ID,  amount,payChannelType,
-                reGold,payOutType, new RequestSubscriber<NowPayBean<OrderBean>>() {
+    private void getNowPayOrder( int pid,  String payChannelType) {
+        HttpManager.getInstance().getNowWXPayOrder(UserUtils.USER_ID, pid+"",payChannelType,
+                payOutType, new RequestSubscriber<NowPayBean<OrderBean>>() {
                     @Override
                     public void _onSuccess(NowPayBean<OrderBean> result) {
                         if (result.getCode() == 0) {
@@ -204,19 +200,20 @@ public class CardDetailActivity extends BaseActivity implements ReceivePayResult
                 });
     }
 
+
     /**
-     *获取订单信息
+     *获取支付宝订单信息
      */
-    private void getOrderInfo(String amount,String reGold,String payOutType) {
-        HttpManager.getInstance().getTradeOrderAlipay(UserUtils.USER_ID, amount,
-                reGold,payOutType,
-                new RequestSubscriber<Result<AlipayBean>>() {
+    private void getOrderInfo(int pid) {
+        HttpManager.getInstance().getOrderAlipay(UserUtils.USER_ID, pid+"",
+                payOutType, new RequestSubscriber<Result<AlipayBean>>() {
                     @Override
                     public void _onSuccess(Result<AlipayBean> result) {
                         if (result.getCode() == 0) {
                             startPay(result.getData().getAlipay()); //调用支付宝支付接口
                         }
                     }
+
                     @Override
                     public void _onError(Throwable e) {
                         LogUtils.logi(e.getMessage());
@@ -254,7 +251,7 @@ public class CardDetailActivity extends BaseActivity implements ReceivePayResult
                         }
                     }
                     initData();
-              }
+                }
             }
             @Override
             public void _onError(Throwable e) {

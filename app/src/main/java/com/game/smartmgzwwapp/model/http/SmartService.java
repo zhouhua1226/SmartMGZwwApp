@@ -717,5 +717,29 @@ public interface SmartService {
                                                      @Field(UrlUtils.WXQQ_CTYPE) String ctype,
                                                      @Field(UrlUtils.WXQQ_CHANNEL) String loginChannel);
 
+    //现在微信支付
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    @FormUrlEncoded
+    @POST(UrlUtils.ORDERWXTRADENEW)
+    Observable<NowPayBean<OrderBean>> getNowWXPayOrder(@Field(UrlUtils.USERID) String userId,
+                                                       @Field(UrlUtils.PLAYID) String pid,
+                                                       @Field(UrlUtils.PAYCHANNELTYPE) String payChannelType,
+                                                       @Field(UrlUtils.APPVERSION) String appversion,
+                                                       @Field(UrlUtils.PAYOUTTYPE) String payOutType,
+                                                       @Field(UrlUtils.PAYTYPE) String payType,
+                                                       @Field(UrlUtils.WXQQ_CTYPE) String ctype,
+                                                       @Field(UrlUtils.WXQQ_CHANNEL) String loginChannel);
+    //支付宝支付
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    @FormUrlEncoded
+    @POST(UrlUtils.ORDERAPALIYTRADENEW)
+    Observable<Result<AlipayBean>> getApaliyPayOrder(@Field(UrlUtils.USERID) String userId,
+                                                     @Field(UrlUtils.PLAYID) String pid,
+                                                     @Field(UrlUtils.APPVERSION) String appversion,
+                                                     @Field(UrlUtils.PAYOUTTYPE) String payOutType,
+                                                     @Field(UrlUtils.PAYTYPE) String payType,
+                                                     @Field(UrlUtils.WXQQ_CTYPE) String ctype,
+                                                     @Field(UrlUtils.WXQQ_CHANNEL) String loginChannel);
+
 
 }
